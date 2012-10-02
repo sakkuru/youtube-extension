@@ -18,24 +18,24 @@ for(var i = 0, l = params.length; i < l; i++) {
 	pObj[a[0]] = a[1];
 }
 
-console.dir(pObj);
+//console.dir(pObj);
 
 //videoのURLを取得
 var xhr = new XMLHttpRequest();
 var url = "http://m.youtube.com/watch?ajax=1&layout=mobile&tsp=1&utcoffset=540&v=" + pObj.v + "&preq="
 xhr.open("get", url);
 xhr.onload = function(e) {
-	console.log(e)
-	console.dir(JSON.parse(e.target.responseText.slice(4)).content.video);
+	
+	//console.dir(JSON.parse(e.target.responseText.slice(4)).content.video);
 
 	var urls = JSON.parse(e.target.responseText.slice(4)).content.video.fmt_stream_map
-	var url
+	var videoUrl
 	for(var i = 0, l = urls.length; i < l; i++) {
-		if(urls[i].itag==18) url = urls[i].url
+		if(urls[i].itag==18) videoUrl = urls[i].url
 	}
-  	console.log(url);
+  	console.log(videoUrl);
 
-	intent = new Intent("http://webintents.org/view", "video/mp4", url);
+	intent = new Intent("http://webintents.org/view", "video/mp4", videoUrl);
 }
 
 xhr.send();
