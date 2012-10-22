@@ -17,7 +17,9 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["/javascripts/jquery-1.7.2.min.js", "/javascripts/add_button.js"]
+      "js": ["/javascripts/jquery-1.7.2.min.js", "/javascripts/add_button.js", "/javascripts/proxyagent.js"],
+      "run_at": "document_end"
+      // "js": ["/javascripts/jquery-1.7.2.min.js", "/javascripts/add_button.js"]
     }
   ]
 }
