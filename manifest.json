@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name" : "Play",
+  "name" : "Add WebIntents button to YouTube",
   "version" : "2",
   "background": {
     "scripts": ["/javascripts/jquery-1.7.2.min.js",  "/javascripts/change_header.js"]
