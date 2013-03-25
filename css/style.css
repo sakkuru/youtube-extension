@@ -1,0 +1,55 @@
+body {
+width: 480px;
+height: 520px;
+}
+
+#media-url {
+  width: 100%;
+  font-size: 0.75em;
+}
+
+.container {
+  margin: 3px 16px;
+}
+
+h1,h2,h3 {
+margin: 0;
+padding: 0;
+}
+
+h1 {
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+.main {
+}
+
+.main .left {
+  float: left;
+  padding-top: 23px;
+  width: 200px;
+}
+
+.main .left img {
+  width: 190px;
+  border: 2px solid #888;
+  border-radius: 6px;
+  box-shadow: 1px 1px 1px gray;
+}
+
+.main .right {
+  margin-left: 200px;
+  width: 250px;
+  overflow-x: hidden;
+}
+
+.clear {
+  clear:both;
+}

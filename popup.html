@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/javascripts/libs/jquery-1.9.1.min.js"></script>
+  <script src="/javascripts/popup.js"></script>
+  </head>
+  <body>
+    <div class="container">
+    <h1>YouTube DLNA adapter</h1>
+    <hr>
+    <h2 id="title"></h2>
+    <div id="alert"></div>
+    <div class="main">
+      <div class="left">
+        <div id="img"></div>
+      </div>
+      <div class="right">
+        <div class="op">
+          <form class="well">
+            <label for="media-url">media-url</label>
+            <input type="text" name="media-url" id="media-url" readonly><br>
+            <button class="btn" id="play" disabled>play</button>
+            <button class="btn" id="pause" disabled>pause</button>
+            <button class="btn" id="stop" disabled>stop</button><br>
+            <label for="volume">volume</label>
+            <input type="number" name="volume" id="volume"><br>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="search">
+      <strong>device list</strong>
+      <button name="m-search" class="btn btn-small" id="m-search" disabled>Search device</button>
+      <form>
+      </form>
+    </div>
+    </div>
+  </body>
+</html>

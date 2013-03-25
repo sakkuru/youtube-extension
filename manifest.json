@@ -1,25 +1,17 @@
 {
   "manifest_version": 2,
-  "name" : "Add WebIntents button to YouTube",
-  "version" : "2",
+  "name" : "DLNA connector for YouTube",
+  "version" : "0.1",
   "background": {
-    "scripts": ["/javascripts/jquery-1.7.2.min.js",  "/javascripts/change_header.js"]
+    "scripts": ["/javascripts/libs/jquery-1.9.1.min.js",  "/javascripts/change_header.js"]
   },
   "permissions" : [
       "webRequest",
       "webRequestBlocking",
-      "contextMenus",
-      "*://image.itmedia.co.jp/*",
       "*://m.youtube.com/*",
-      "http://*/",
       "tabs"
   ],
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["/javascripts/jquery-1.7.2.min.js", "/javascripts/add_button.js", "/javascripts/proxyagent.js"],
-      "run_at": "document_end"
-      // "js": ["/javascripts/jquery-1.7.2.min.js", "/javascripts/add_button.js"]
-    }
-  ]
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
 }
